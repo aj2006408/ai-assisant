@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Daily Helper</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #52e3c9, #5e6eb5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 500px;
+      background:linear-gradient(135deg,#5e6eb5, #52e3c9);
+      color: #1f1f1f;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #2d2d2d;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 25px;
+      background-color: #5b33ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6f4dff;
+    }
+
+    p {
+      margin-top: 25px;
+      font-size: 17px;
+      color: #555;
+    }
+
+    strong {
+      color: #4a00e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🤖 Smart Daily Helper</h1>
+    <form method="POST">
+      <input type="text" name="user_input" placeholder="Ask me something..." required>
+      <br><br>
+      <button type="submit">Ask</button>
+    </form>
+    <p><strong>Response:</strong> {{ response }}</p>
+  </div>
+</body>
+</html>
